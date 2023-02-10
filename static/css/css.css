@@ -1,0 +1,43 @@
+   /* Stylesheet for the login page */
+    .login-box {
+        width: 400px;
+        margin: 100px auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+    }
+    .login-header {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .login-body {
+        text-align: center;
+    }
+    .form-group {
+        display: inline-block;
+        text-align: left;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    b {
+        margin-left: 10px;
+    }
+    .alert {
+        margin-top: 20px;
+        text-align: left;
+    }aaaaaaa

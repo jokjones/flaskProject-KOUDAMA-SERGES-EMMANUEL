@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link href="{{ url_for('static', filename='css/bootstrap-grid.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.rtl.min.css') }}" rel="stylesheet">
+
+<body>
+<div class="login-box">
+    <div class="login-header">login</div>
+    <div class="login-body">
+        <p>Please enter your username and password </p>
+        <form class="form-group" action="{{ url_for('login') }}" method="post">
+            <label>Username</label>
+              <input type="text" class="form-control" name="username" id="username" placeholder=" Username" required>
+            <label>Password</label>
+              <input type="text" class="form-control" name="password" id="password" placeholder="Password" required>
+            <input type="checkbox" value="checked"><b>Remember</b>
+            <input type="submit" value="login" class="form-control btn btn-success" name="">
+
+             {% with messages = get_flashed_messages %}
+                     {%  if messages %}
+                     {% for mesage in messages %}
+                     <div class="alert alert-success alert-dismissible fade show" role="alert">
+                         {{ messages }}
+                         <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                             <span aria-hidden="true"></span>
+                         </button>
+                     </div>
+                     {% endfor  %}
+                     {% endif %}
+                     {% endwith %}
+        </form>
+        <p>No account <a href="{{ url_for('register') }}">Register</a> </p>
+    </div>
+</div>
+
+</body>
+</html>
